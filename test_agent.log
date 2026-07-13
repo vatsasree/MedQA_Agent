@@ -1,0 +1,9 @@
+nohup: ignoring input
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6573.52it/s]
+--- Message 0 ---
+Type: <class 'langchain_core.messages.human.HumanMessage'>
+Content: 'how to treat stomach pain during night at sleep?'
+--- Message 1 ---
+Type: <class 'langchain_core.messages.ai.AIMessage'>
+Content: ''
+Tool Calls: []
