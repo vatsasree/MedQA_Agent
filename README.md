@@ -6,6 +6,29 @@ The MedQA Agent is designed to intelligently search through medical handbooks fo
 
 ---
 
+## 💻 Technology Stack
+
+**Frontend & Orchestration**
+* **[Streamlit](https://streamlit.io/):** Interactive Chat UI
+* **[LangChain](https://www.langchain.com/) / [LangGraph](https://www.langchain.com/langgraph):** Agentic workflows, RAG orchestration, and Tool Calling logic
+* **[ChromaDB](https://www.trychroma.com/):** Local Vector Database for Document Retrieval (RAG)
+* **[Sentence-Transformers](https://sbert.net/):** Local HuggingFace Embeddings (`BAAI/bge-small-en-v1.5`)
+
+**Backend Inference Engine**
+* **[vLLM](https://github.com/vllm-project/vllm):** High-throughput, distributed inference server (OpenAI API compatible)
+* **LLM:** `Qwen/Qwen3.5-122B-A10B` (Served with Tensor Parallelism across 4 GPUs)
+* **Infrastructure:** 4x NVIDIA GPUs, `tmux` multiplexing, NCCL socket-tuning for distributed PyTorch.
+
+**Software Engineering Practices**
+* **CI/CD:** GitHub Actions (Automated Linting & Testing)
+* **Linting/Formatting:** Ruff (`pyproject.toml`)
+* **Testing:** Pytest
+* **Containerization:** Docker (`Dockerfile`)
+* **Security:** Pre-commit hooks for secret scanning
+
+---
+
+
 ## 🚀 Quick Start
 
 The entire stack (vLLM inference server and Streamlit frontend) is managed seamlessly via a single bash script that handles GPU environment configuration, NCCL networking (to prevent multi-GPU segfaults), and background `tmux` sessions.
