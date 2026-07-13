@@ -7,30 +7,23 @@ __pycache__/
 *.py[cod]
 *$py.class
 .pytest_cache/
-.coverage
-htmlcov/
-.tox/
-.mypy_cache/
-.ruff_cache/
 
 # Databases
 chroma_db/
 *.sqlite3
 *.db
 
-# Logs
-*.log
-vllm.log
-test_agent.log
+# Data (Don't copy giant medical PDFs or models into the container by default)
+data/
+models/
+
+# Git and OS
+.git/
+.github/
+.DS_Store
 
 # Virtual Environments
 venv/
 .venv/
 env/
 ENV/
-
-# IDEs and OS
-.vscode/
-.idea/
-.DS_Store
-*.swp
