@@ -16,7 +16,7 @@ The MedQA Agent is designed to intelligently search through medical handbooks fo
 
 **Backend Inference Engine**
 * **[vLLM](https://github.com/vllm-project/vllm):** High-throughput, distributed inference server (OpenAI API compatible)
-* **LLM:** `Qwen/Qwen3.5-122B-A10B` (Served with Tensor Parallelism across 4 GPUs)
+* **LLM:** `Qwen/Qwen3.5-122B-A10B` (Served with Tensor Parallelism across 1 H100 Node; 8 GPUs)
 * **Infrastructure:** 4x NVIDIA GPUs, `tmux` multiplexing, NCCL socket-tuning for distributed PyTorch.
 
 **Software Engineering Practices**
